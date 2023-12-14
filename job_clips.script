@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH -N 1
+#SBATCH -n 100
+#SBATCH -o clips.log
+#SBATCH -J clips
+#SBATCH -p gpu-a100
+#SBATCH -t 10:15:00
+#SBATCH --mail-user=
+#SBATCH --mail-type=all
+
+
+source miniconda3/etc/profile.d/conda.sh
+conda activate hidro-vqa
+
+
+ibrun -n 100 python3 get_clips_MultiProcess.py
+

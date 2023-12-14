@@ -1,0 +1,5 @@
+#igore all large file 
+*.mp4 
+*.webm 
+*.zip 
+ffmpeg
