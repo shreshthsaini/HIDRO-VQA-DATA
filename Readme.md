@@ -5,6 +5,7 @@
 
 > **HIDRO-VQA: High Dynamic Range Oracle for Video Quality Assessment**  
 > Shreshth Saini, Avinab Saha, Alan C. Bovik  
+> 3rd Workshop on Image/Video/Audio Quality in Computer Vision and Generative AI  
 > WACV 2024
 
 We provide IDs for all the videos used to create the dataset proposed in HIDRO-VQA. This repository prepares the final dataset from assumed pristine videos (make sure you download all videos first in highest available quality, i.e. 4K HDR). 
@@ -75,6 +76,13 @@ Before running the code, make sure you have the following installed:
     ```
 
     The script will create a folder with all the distorted videos in the output path.
+
+6. Finally, we extract frames (HIDRO-VQA uses only 1 frame each clip) to training: 
+
+    ```bash
+    python extract_frames.py --num_frames 1 --clips_path ./path/to/save/distorted/videos --save_path ./path/to/save/frames/
+    ```
+
 
 
 
